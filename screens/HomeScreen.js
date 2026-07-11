@@ -1,75 +1,83 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
 export default function HomeScreen({ navigation }) {
+
   return (
+
     <View style={styles.container}>
 
-      <Text style={styles.title}>💰 Smart Khata Pro</Text>
-      <Text style={styles.subtitle}>Manage your daily business easily</Text>
+      <Text style={styles.title}>
+        💰 Smart Khata Pro
+      </Text>
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Add Transaction')}>
-        <Text style={styles.buttonText}>➕ Add Transaction</Text>
-      </TouchableOpacity>
+      <Button
+        title="➕ Add Customer"
+        onPress={() => navigation.navigate('Add Customer')}
+      />
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Transactions')}>
-        <Text style={styles.buttonText}>📋 View Transactions</Text>
-      </TouchableOpacity>
+      <View style={{height:15}} />
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Reports')}>
-        <Text style={styles.buttonText}>📊 Reports</Text>
-      </TouchableOpacity>
+      <Button
+        title="👥 Customer List"
+        onPress={() => navigation.navigate('Customers')}
+      />
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Settings')}>
-        <Text style={styles.buttonText}>⚙️ Settings</Text>
-      </TouchableOpacity>
+      <View style={{height:15}} />
+
+      <Button
+        title="💰 Add Transaction"
+        onPress={() => navigation.navigate('Add Transaction')}
+      />
+
+      <View style={{height:15}} />
+
+      <Button
+        title="📋 View Transactions"
+        onPress={() => navigation.navigate('Transactions')}
+      />
+
+      <View style={{height:15}} />
+
+      <Button
+        title="📒 Khata Entry"
+        onPress={() => navigation.navigate('Khata Entry')}
+      />
+
+      <View style={{height:15}} />
+
+      <Button
+        title="📊 Reports"
+        onPress={() => navigation.navigate('Reports')}
+      />
+
+      <View style={{height:15}} />
+
+      <Button
+        title="⚙️ Settings"
+        onPress={() => navigation.navigate('Settings')}
+      />
 
     </View>
+
   );
 }
 
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-    justifyContent: 'center',
-    backgroundColor: '#F5F7FA',
+
+  container:{
+    flex:1,
+    justifyContent:'center',
+    padding:20,
+    backgroundColor:'#fff'
   },
 
-  title: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 10,
-    color: '#0A84FF',
-  },
+  title:{
+    fontSize:30,
+    fontWeight:'bold',
+    textAlign:'center',
+    marginBottom:40
+  }
 
-  subtitle: {
-    fontSize: 16,
-    textAlign: 'center',
-    marginBottom: 35,
-    color: '#666',
-  },
-
-  button: {
-    backgroundColor: '#0A84FF',
-    padding: 16,
-    borderRadius: 10,
-    marginBottom: 15,
-  },
-
-  buttonText: {
-    color: '#fff',
-    textAlign: 'center',
-    fontSize: 17,
-    fontWeight: 'bold',
-  },
 });
