@@ -2,8 +2,8 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import AddTransactionScreen from './src/screens/AddTransactionScreen';
-import TransactionListScreen from './src/screens/TransactionListScreen';
+import AddTransactionScreen from './screens/AddTransactionScreen';
+import TransactionListScreen from './screens/TransactionListScreen';
 
 const Stack = createNativeStackNavigator();
 
