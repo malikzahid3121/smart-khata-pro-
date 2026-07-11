@@ -7,12 +7,16 @@ import AddTransactionScreen from './screens/AddTransactionScreen';
 import TransactionListScreen from './screens/TransactionListScreen';
 import ReportsScreen from './screens/ReportsScreen';
 import SettingsScreen from './screens/SettingsScreen';
+import AddCustomerScreen from './screens/AddCustomerScreen';
+import CustomerListScreen from './screens/CustomerListScreen';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+
   return (
     <NavigationContainer>
+
       <Stack.Navigator initialRouteName="Home">
 
         <Stack.Screen
@@ -31,6 +35,16 @@ export default function App() {
         />
 
         <Stack.Screen
+          name="Add Customer"
+          component={AddCustomerScreen}
+        />
+
+        <Stack.Screen
+          name="Customers"
+          component={CustomerListScreen}
+        />
+
+        <Stack.Screen
           name="Reports"
           component={ReportsScreen}
         />
@@ -41,6 +55,7 @@ export default function App() {
         />
 
       </Stack.Navigator>
+
     </NavigationContainer>
   );
 }
