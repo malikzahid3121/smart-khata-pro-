@@ -10,6 +10,7 @@ import SettingsScreen from './screens/SettingsScreen';
 import AddCustomerScreen from './screens/AddCustomerScreen';
 import CustomerListScreen from './screens/CustomerListScreen';
 import KhataEntryScreen from './screens/KhataEntryScreen';
+import KhataListScreen from './screens/KhataListScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,45 +21,23 @@ export default function App() {
 
       <Stack.Navigator initialRouteName="Home">
 
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-        />
+        <Stack.Screen name="Home" component={HomeScreen} />
 
-        <Stack.Screen
-          name="Add Customer"
-          component={AddCustomerScreen}
-        />
+        <Stack.Screen name="Add Customer" component={AddCustomerScreen} />
 
-        <Stack.Screen
-          name="Customers"
-          component={CustomerListScreen}
-        />
+        <Stack.Screen name="Customers" component={CustomerListScreen} />
 
-        <Stack.Screen
-          name="Add Transaction"
-          component={AddTransactionScreen}
-        />
+        <Stack.Screen name="Add Transaction" component={AddTransactionScreen} />
 
-        <Stack.Screen
-          name="Transactions"
-          component={TransactionListScreen}
-        />
+        <Stack.Screen name="Transactions" component={TransactionListScreen} />
 
-        <Stack.Screen
-          name="Khata Entry"
-          component={KhataEntryScreen}
-        />
+        <Stack.Screen name="Khata Entry" component={KhataEntryScreen} />
 
-        <Stack.Screen
-          name="Reports"
-          component={ReportsScreen}
-        />
+        <Stack.Screen name="Khata List" component={KhataListScreen} />
 
-        <Stack.Screen
-          name="Settings"
-          component={SettingsScreen}
-        />
+        <Stack.Screen name="Reports" component={ReportsScreen} />
+
+        <Stack.Screen name="Settings" component={SettingsScreen} />
 
       </Stack.Navigator>
 
