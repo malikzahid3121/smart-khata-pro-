@@ -11,12 +11,14 @@ export default function HomeScreen({ navigation }) {
         💰 Smart Khata Pro
       </Text>
 
+
       <Button
         title="➕ Add Customer"
         onPress={() => navigation.navigate('Add Customer')}
       />
 
       <View style={{height:15}} />
+
 
       <Button
         title="👥 Customer List"
@@ -25,6 +27,7 @@ export default function HomeScreen({ navigation }) {
 
       <View style={{height:15}} />
 
+
       <Button
         title="💰 Add Transaction"
         onPress={() => navigation.navigate('Add Transaction')}
@@ -32,19 +35,30 @@ export default function HomeScreen({ navigation }) {
 
       <View style={{height:15}} />
 
+
       <Button
-        title="📋 View Transactions"
+        title="📋 Transactions"
         onPress={() => navigation.navigate('Transactions')}
       />
 
       <View style={{height:15}} />
 
+
       <Button
-        title="📒 Khata Entry"
+        title="📒 Add Khata Entry"
         onPress={() => navigation.navigate('Khata Entry')}
       />
 
       <View style={{height:15}} />
+
+
+      <Button
+        title="📖 Khata History"
+        onPress={() => navigation.navigate('Khata List')}
+      />
+
+      <View style={{height:15}} />
+
 
       <Button
         title="📊 Reports"
@@ -53,10 +67,12 @@ export default function HomeScreen({ navigation }) {
 
       <View style={{height:15}} />
 
+
       <Button
         title="⚙️ Settings"
         onPress={() => navigation.navigate('Settings')}
       />
+
 
     </View>
 
