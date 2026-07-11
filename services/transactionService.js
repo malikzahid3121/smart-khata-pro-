@@ -1,5 +1,6 @@
 import { saveData, getData } from '../storage';
 
+
 export const saveTransaction = async (transaction) => {
 
   let transactions = await getData('transactions');
@@ -16,6 +17,7 @@ export const saveTransaction = async (transaction) => {
 };
 
 
+
 export const getTransactions = async () => {
 
   let transactions = await getData('transactions');
@@ -25,5 +27,27 @@ export const getTransactions = async () => {
   }
 
   return transactions;
+
+};
+
+
+
+export const deleteTransaction = async (id) => {
+
+  let transactions = await getData('transactions');
+
+  if (!transactions) {
+    transactions = [];
+  }
+
+
+  const updatedTransactions = transactions.filter(
+    item => item.id !== id
+  );
+
+
+  await saveData('transactions', updatedTransactions);
+
+  return true;
 
 };
