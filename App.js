@@ -2,19 +2,25 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import HomeScreen from './screens/HomeScreen';
 import AddTransactionScreen from './screens/AddTransactionScreen';
 import TransactionListScreen from './screens/TransactionListScreen';
+import ReportsScreen from './screens/ReportsScreen';
+import SettingsScreen from './screens/SettingsScreen';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-
   return (
     <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
 
-      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+        />
 
-        <Stack.Screen 
+        <Stack.Screen
           name="Add Transaction"
           component={AddTransactionScreen}
         />
@@ -24,8 +30,17 @@ export default function App() {
           component={TransactionListScreen}
         />
 
-      </Stack.Navigator>
+        <Stack.Screen
+          name="Reports"
+          component={ReportsScreen}
+        />
 
+        <Stack.Screen
+          name="Settings"
+          component={SettingsScreen}
+        />
+
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
