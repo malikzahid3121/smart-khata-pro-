@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Smart Khata Pro",
+    "slug": "smart-khata-pro",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "platforms": ["android"],
+    "assetBundlePatterns": ["**/*"]
+  }
+}
