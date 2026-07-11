@@ -1,92 +1,47 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
 
   return (
+
     <View style={styles.container}>
 
       <Text style={styles.title}>
         Smart Khata Pro
       </Text>
 
-      <View style={styles.card}>
-        <Text style={styles.cardTitle}>
-          Total Udhaar
-        </Text>
-        <Text style={styles.amount}>
-          Rs 0
-        </Text>
-      </View>
+      <Button
+        title="Add Transaction"
+        onPress={() => navigation.navigate('Add Transaction')}
+      />
 
-      <View style={styles.card}>
-        <Text style={styles.cardTitle}>
-          Total Jama
-        </Text>
-        <Text style={styles.amount}>
-          Rs 0
-        </Text>
-      </View>
+      <View style={{height:20}} />
 
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>
-          + Add Customer
-        </Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>
-          Add Khata Entry
-        </Text>
-      </TouchableOpacity>
+      <Button
+        title="View Transactions"
+        onPress={() => navigation.navigate('Transactions')}
+      />
 
     </View>
+
   );
 }
 
+
 const styles = StyleSheet.create({
 
-  container: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: '#fff',
+  container:{
+    flex:1,
+    justifyContent:'center',
+    padding:20
   },
 
-  title: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 30,
-  },
-
-  card: {
-    padding: 20,
-    borderRadius: 15,
-    backgroundColor: '#f2f2f2',
-    marginBottom: 15,
-  },
-
-  cardTitle: {
-    fontSize: 18,
-  },
-
-  amount: {
-    fontSize: 25,
-    fontWeight: 'bold',
-    marginTop: 10,
-  },
-
-  button: {
-    padding: 15,
-    borderRadius: 10,
-    backgroundColor: '#333',
-    marginTop: 15,
-  },
-
-  buttonText: {
-    color: 'white',
-    textAlign: 'center',
-    fontSize: 18,
-  },
+  title:{
+    fontSize:28,
+    fontWeight:'bold',
+    textAlign:'center',
+    marginBottom:40
+  }
 
 });
